@@ -6,13 +6,13 @@ phases:
       dotnet: 6.0
   pre_build:
     commands:
-      - dotnet restore AWSCodePipelineDotnetDemo/AWSCodePipelineDotnetDemo.csproj
+      - dotnet restore AWSCodePipelineDemo/AWSCodePipelineDemo.csproj
   build:
     commands:
-      - dotnet build AWSCodePipelineDotnetDemo/AWSCodePipelineDotnetDemo.csproj
+      - dotnet build AWSCodePipelineDemo/AWSCodePipelineDemo.csproj
   post_build:
     commands:
-      - dotnet publish -c Release -o ./app/ AWSCodePipelineDotnetDemo/AWSCodePipelineDotnetDemo.csproj
+      - dotnet publish -c Release -o ./app/ AWSCodePipelineDemo/AWSCodePipelineDemo.csproj
 artifacts:
   files:
     - '**/*'
